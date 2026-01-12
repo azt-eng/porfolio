@@ -1,5 +1,4 @@
 
-        
         /* ===== RÉINITIALISATION (Reset) ===== */
         * {
             margin: 0;
@@ -222,7 +221,7 @@
 
         /* ===== SKILLS SECTION ===== */
         .skills {
-            background-color: #f5f5f7;
+            background-color: #f9e1b1;
             padding: 120px 0;
         }
 
@@ -235,6 +234,7 @@
             /* TODO MARDI CSS : Vérifier que c'est du flexbox avec gap */
         }
 
+              /* ajoute une animation sur les incones des compétences */
         .skill-card {
             background: white;
             padding: 40px;
@@ -245,9 +245,21 @@
             transition: all 0.3s;
         }
 
-        .skill-card:hover {
-            /* TODO MARDI CSS : Ajouter transform: translateY(-8px); */
-        }
+          .skill-card:hover {
+                  ground: white;
+                  padding: 40px;
+                  border-radius: 24px;
+                  transition: var(--transition);
+                  border: 1px solid transparent;
+            }
+       
+            .skill-card:hover {
+                  transform: translateY(-10px);
+                  border-color: var(--primary-color);
+                  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+              }
+
+                        }
 
         .skill-icon {
             font-size: 3.5rem;
@@ -270,7 +282,7 @@
 
         /* ===== PROJECTS SECTION ===== */
         .projects {
-            background-color: #ffffff;
+            background-color:#f9e1b1;
             padding: 120px 0;
         }
 
@@ -292,9 +304,53 @@
             transition: all 0.3s;
         }
 
-        .project-card:hover {
-            /* TODO MARDI CSS : Ajouter transform: translateY(-4px); */
-        }
+
+          /* ajoute une animation au niveau de l'image dans les rectangles des projets */
+
+          .project-image {
+                width: 50%;
+                min-height: 350px;
+                border-radius: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.8rem;
+                font-weight: 800;
+                transition: var(--transition);
+            }
+
+            .project-grad-1 {
+                  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+              }
+
+            .project-grad-2 {
+                background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            }
+
+             .project-card:hover .project-image {
+                  filter: saturate(1.2);
+                  transform: scale(0.98);
+              }
+
+             .project-content {
+                  flex: 1;
+              }
+
+             .project-link {
+                  color: var(--primary-color);
+                  text-decoration: none;
+                  font-weight: 700;
+                  display: inline-block;
+                  margin-top: 10px;
+                  transition: var(--transition);
+              }
+
+              .project-link:hover {
+                  letter-spacing: 1px;
+              }
+
+        
 
         .project-card:nth-child(2) {
             flex-direction: row-reverse;
@@ -341,13 +397,10 @@
             font-size: 1.05rem;
         }
 
-        .project-link:hover {
-            /* TODO MARDI CSS : Ajouter color: #0a84ff; */
-        }
 
         /* ===== CONTACT SECTION / FORM ===== */
         .contact {
-            background-color: #f5f5f7;
+            background-color:#f9e1b1;
             padding: 120px 0;
         }
 
@@ -359,14 +412,14 @@
             letter-spacing: -0.5px;
         }
 
-        .contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            /* TODO MARDI CSS : Vérifier que c'est du flexbox column */
-        }
+           .contact-form {
+              max-width: 600px;
+              margin: 0 auto;
+              background: #493a73;
+              padding: 40px;
+              border-radius: 24px;
+          }
+        
 
         .form-group {
             display: flex;
@@ -377,9 +430,9 @@
         .form-group label {
             font-weight: 500;
             font-size: 1rem;
-            color: #1d1d1f;
+            color: #dddddd;
         }
-
+            /* carastéristique du tableau */
         .form-group input,
         .form-group textarea {
             padding: 12px 16px;
@@ -392,7 +445,14 @@
 
         .form-group input:focus,
         .form-group textarea:focus {
-            /* TODO MARDI CSS : Ajouter outline: none; border-color: #0071e3; */
+            width: 100%;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            outline: none;
+            transition: var(--transition);
         }
 
         .form-group textarea {
@@ -413,10 +473,11 @@
             margin-top: 16px;
         }
 
-        .submit-button:hover {
-            /* TODO MARDI CSS : Ajouter background-color: #0a84ff; */
-        }
-
+       
+            .submit-button:hover {
+                  background-color: #daaf74;
+                  transform: scale(1.02);
+              }
         /* ===== FOOTER ===== */
         footer {
             background-color: #f5f5f7;
